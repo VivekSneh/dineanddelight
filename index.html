@@ -26,16 +26,22 @@
     h2 {
       color: #ff7043;
     }
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
     .button {
       background-color: #ff7043;
       color: white;
       padding: 12px 25px;
       text-decoration: none;
       border-radius: 8px;
-      display: inline-block;
-      margin: 8px;
       font-weight: 600;
       transition: 0.3s;
+      min-width: 180px;
     }
     .button:hover {
       background-color: #e65c2e;
@@ -45,6 +51,7 @@
       color: #ddd;
       padding: 15px 10px;
       font-size: 14px;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -60,10 +67,12 @@
     <p><strong>FSSAI License No:</strong> 20425001002296</p>
     <p><strong>Free Delivery:</strong> within 2 km of Postal Park, Patna</p>
 
-    <!-- Buttons -->
-    <a class="button" href="https://wa.me/919142617150" target="_blank">📞 Order on WhatsApp</a><br>
-    <a class="button" href="https://beacons.ai/dineanddelight" target="_blank">🍽️ Order via Swiggy / Zomato</a><br>
-    <a class="button" href="https://share.google/0he2u6jxRmV2cFOOL" target="_blank">🌐 View on Google</a>
+    <!-- Three Buttons in One Row -->
+    <div class="button-container">
+      <a class="button" href="https://wa.me/919142617150" target="_blank">📞 WhatsApp</a>
+      <a class="button" href="https://beacons.ai/dineanddelight" target="_blank">🍽️ Swiggy / Zomato</a>
+      <a class="button" href="https://share.google/0he2u6jxRmV2cFOOL" target="_blank">🌐 Google Profile</a>
+    </div>
   </section>
 
   <section>
