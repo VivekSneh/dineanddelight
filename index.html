@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dine & Delight | Patna's Premium Tiffin Service</title>
   <meta name="description" 
-        content="Patna's No.1 Tiffin Service trusted by 100+ families. Completely homemade, hygienic, FSSAI licensed. Free delivery. WhatsApp to order instantly." />
+        content="Patna's No.1 Tiffin Service trusted by 100+ families. Homemade, hygienic, FSSAI licensed. Free delivery. Try 1 day for ₹99 or order monthly." />
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -17,7 +17,6 @@
       color: #333;
     }
 
-    /* HEADER */
     header {
       background: #ffffffee;
       backdrop-filter: blur(6px);
@@ -31,7 +30,6 @@
       color: #ff7043;
     }
 
-    /* HERO SECTION */
     .hero {
       background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), 
                   url('https://raw.githubusercontent.com/viveksneh/dineanddelight/main/assets/banner.jpg') center/cover no-repeat;
@@ -57,7 +55,6 @@
       text-shadow: 0 2px 10px rgba(0,0,0,0.5);
     }
 
-    /* MAIN BOX */
     .highlight-box {
       background: #fff3ec;
       border-left: 6px solid #ff7043;
@@ -79,7 +76,6 @@
       margin-bottom: 15px;
     }
 
-    /* BUTTONS */
     .button-container {
       display: flex;
       justify-content: center;
@@ -103,7 +99,6 @@
       background-color: #e85e2e;
     }
 
-    /* PRICING SECTION */
     .pricing-box {
       background: white;
       padding: 22px;
@@ -122,8 +117,12 @@
       color: #ff7043;
       font-weight: 700;
     }
+    .price-small {
+      font-size: 18px;
+      color: #ff7043;
+      font-weight: 600;
+    }
 
-    /* WHY CHOOSE US & OTHER INFO */
     .steps {
       width: 90%;
       max-width: 700px;
@@ -137,7 +136,6 @@
       font-weight: 700;
     }
 
-    /* TESTIMONIALS */
     .testimonials {
       width: 90%;
       max-width: 700px;
@@ -153,7 +151,6 @@
       line-height: 1.6;
     }
 
-    /* OFFERS */
     .offer-box {
       background:#fff3ec; 
       border-left:6px solid #ff7043; 
@@ -164,7 +161,6 @@
       font-size:16px;
     }
 
-    /* FOOTER */
     footer {
       background: #222;
       padding: 15px;
@@ -173,7 +169,6 @@
       margin-top: 40px;
     }
 
-    /* STICKY WHATSAPP */
     .sticky-btn {
       position: fixed;
       bottom: 20px;
@@ -186,6 +181,15 @@
       font-weight: 600;
       box-shadow: 0 4px 14px rgba(0,0,0,0.3);
       z-index: 999;
+    }
+
+    .trust-badges {
+      display:flex; 
+      justify-content:center; 
+      gap:15px; 
+      margin-top:10px;
+      font-weight:600;
+      color:#ff7043;
     }
   </style>
 </head>
@@ -208,21 +212,6 @@
   ⭐ FSSAI License: <b>20425001002296</b>
 </div>
 
-<h2>Order Instantly</h2>
-<div class="button-container">
-  <a class="button" href="https://wa.me/919142617150" target="_blank">📞 WhatsApp</a>
-  <a class="button" href="https://wa.me/919142617150?text=Show%20me%20today's%20menu" target="_blank">📋 View Menu</a>
-  <a class="button" href="https://share.google/0he2u6jxRmV2cFOOL" target="_blank">⭐ Google Reviews</a>
-</div>
-
-<h2>Our Bestselling Monthly Plan</h2>
-<div class="pricing-box">
-  <h3>Lunch + Dinner Combo</h3>
-  <div class="price">₹3599 / month</div>
-  <p>Complete Meals • Free Delivery • Daily Rotation</p>
-</div>
-
-<!-- WHY CHOOSE US -->
 <h2>Why Choose Us</h2>
 <div class="steps">
   🔹 Freshly cooked <span class="highlight">homemade meals</span> — just like your home kitchen<br>
@@ -230,32 +219,33 @@
   🔹 Daily changing menu to enjoy variety without repetition<br>
   🔹 Free delivery anywhere in Patna, always on time<br>
   🔹 Trusted by 100+ families, students & working professionals<br>
-  🔹 Premium taste at the <span class="highlight">most affordable monthly price</span> in the city<br>
+  🔹 Premium taste at the <span class="highlight">most affordable monthly price</span><br>
   🔹 Zero preservatives, zero compromise — only clean, healthy food<br>
 </div>
 
-<!-- WHAT WE SERVE -->
-<h2>What We Serve</h2>
-<div class="steps">
-  🔹 We serve <span class="highlight">Pure Veg</span> and <span class="highlight">Non-Veg</span> meals freshly cooked every day<br>
-  🔹 100% homemade, hygienic, rich in taste & nutrition<br>
+<h2>🎉 Trial Offer – Risk-Free</h2>
+<div class="pricing-box" style="background:#fffbe6; border:2px solid #ff7043;">
+  <h3>Try 1 Day – Just ₹99</h3>
+  <div class="price">₹99 / day</div>
+  <p>Experience fresh, hygienic meals before subscribing monthly.</p>
+  <a class="button" href="https://wa.me/919142617150?text=I%20want%20the%2099%20rupee%20trial" target="_blank">📞 Try 1 Day</a>
 </div>
 
-<!-- MEAL TIMINGS -->
-<h2>Our Meal Timings</h2>
-<div class="steps">
-  🍽️ <span class="highlight">Breakfast:</span> 8:30 AM – 9:30 AM<br>
-  🍛 <span class="highlight">Lunch:</span> 11:30 AM – 1:30 PM<br>
-  🍗 <span class="highlight">Dinner:</span> 7:30 PM – 9:00 PM<br>
-  ⏱️ Always delivered fresh and on time
+<h2>Our Bestselling Monthly Plan</h2>
+<div class="pricing-box">
+  <h3>Lunch + Dinner Combo</h3>
+  <div class="price">₹3599 / month</div>
+  <div class="price-small">≈ ₹119 / day • Complete Meals • Free Delivery</div>
+  <div class="trust-badges">
+    ✅ FSSAI Licensed  ✅ 100% Homemade ✅ Free Delivery
+  </div>
 </div>
 
-<!-- GREAT OFFERS -->
 <h2>🎉 Great Offers</h2>
 <div class="steps">
   <div class="offer-box">🥳 <span class="highlight">First-time joiners:</span> Get <span class="highlight">₹299 OFF</span> for your first month!</div>
-  <div class="offer-box">👨‍👩‍👧 <span class="highlight">Refer your friends & family:</span> Get <span class="highlight">₹299 OFF</span> for each referral!</div>
-  <div class="offer-box">🍽️ <span class="highlight">Breakfast + Lunch + Dinner Combo:</span> Flat <span class="highlight">₹399 OFF</span> this month!</div>
+  <div class="offer-box">👨‍👩‍👧 <span class="highlight">Refer friends & family:</span> Get <span class="highlight">₹299 OFF</span> for each referral!</div>
+  <div class="offer-box">🔥 Only 20 slots left for first-time subscribers this week! Hurry!</div>
 </div>
 
 <h2>What Our Customers Say</h2>
@@ -265,12 +255,19 @@
   <div class="testimonial">“Affordable and perfect for students & working people.” – ⭐⭐⭐⭐⭐</div>
 </div>
 
+<h2>Order Instantly</h2>
+<div class="button-container">
+  <a class="button" href="https://wa.me/919142617150" target="_blank">📞 WhatsApp</a>
+  <a class="button" href="https://wa.me/919142617150?text=Show%20me%20today's%20menu" target="_blank">📋 View Menu</a>
+  <a class="button" href="https://share.google/0he2u6jxRmV2cFOOL" target="_blank">⭐ Google Reviews</a>
+</div>
+
 <footer>
   © 2025 Dine & Delight | All Rights Reserved<br>
   WhatsApp: +91 9142617150
 </footer>
 
-<a href="https://wa.me/919142617150" class="sticky-btn">💬 Order Now</a>
+<a href="https://wa.me/919142617150?text=I%20want%20the%2099%20rupee%20trial" class="sticky-btn">🎉 Try 1 Day ₹99</a>
 
 </body>
 </html>
