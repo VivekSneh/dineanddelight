@@ -4,45 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dine & Delight | Patna's Premium Tiffin Service</title>
-  <meta name="description" 
-        content="Patna's No.1 Tiffin Service trusted by 100+ families. Homemade, hygienic, FSSAI licensed. Try Chef’s Special Trial ₹79/meal or order monthly ₹59/meal." />
+  <meta name="description" content="Patna's No.1 Tiffin Service trusted by 100+ families. Homemade, hygienic, FSSAI licensed. Try Chef’s Special Trial ₹79/meal or order monthly ₹59/meal." />
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
     body { font-family: 'Poppins', sans-serif; margin: 0; background: #fffdf8; color: #333; }
     header { background: #ffffffee; backdrop-filter: blur(6px); display: flex; justify-content: center; align-items: center; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); font-size: 22px; font-weight: 700; color: #ff7043; }
+    
     .hero { background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://raw.githubusercontent.com/viveksneh/dineanddelight/main/assets/banner.jpg') center/cover no-repeat; padding: 80px 20px; text-align: center; color: #fff; border-radius: 0 0 20px 20px; box-shadow: inset 0 0 100px rgba(0,0,0,0.2); }
-    .hero h1 { font-size: 36px; font-weight: 700; text-shadow: 0 2px 15px rgba(0,0,0,0.6); background: rgba(255, 255, 255, 0.15); display: inline-block; padding: 10px 20px; border-radius: 12px; }
+    .hero h1 { font-size: 36px; font-weight: 700; text-shadow: 0 2px 15px rgba(0,0,0,0.6); background: rgba(255, 255, 255, 0.15); display: inline-block; padding: 10px 20px; border-radius: 12px; animation: fadeIn 1.5s ease forwards; }
     .hero p { font-size: 20px; margin-top: 15px; font-weight: 500; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
 
     .highlight-box { background: #fff3ec; border-left: 6px solid #ff7043; padding: 20px; margin: 20px auto; width: 90%; max-width: 600px; border-radius: 12px; text-align: center; font-size: 16px; line-height: 1.8; box-shadow: 0 4px 10px rgba(255,112,67,0.15); }
+
     h2 { color: #ff7043; text-align: center; margin-top: 35px; margin-bottom: 15px; }
+
     .button-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 15px; }
     .button { background-color: #ff7043; color: white; padding: 12px 25px; text-decoration: none; border-radius: 10px; font-weight: 600; min-width: 170px; text-align: center; box-shadow: 0 4px 10px rgba(255,112,67,0.4); transition: 0.3s; }
     .button:hover { background-color: #e85e2e; }
+    .button-trial { background-color: #25D366; box-shadow: 0 0 12px #25D366; }
+    .button-trial:hover { box-shadow: 0 0 20px #25D366; transform: scale(1.05); }
 
-    .pricing-box { background: white; padding: 22px; width: 90%; max-width: 500px; margin: 20px auto; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; }
+    .pricing-box { background: white; padding: 22px; width: 90%; max-width: 500px; margin: 20px auto; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; position: relative; }
     .pricing-box h3 { margin-bottom: 10px; }
     .price { font-size: 34px; color: #ff7043; font-weight: 700; }
-    .price-small { font-size: 18px; color: #ff7043; font-weight: 600; margin-top:5px; }
     .trust-badges { display:flex; justify-content:center; gap:15px; margin-top:10px; font-weight:600; color:#ff7043; }
+
+    .popular-ribbon { position:absolute; top:-10px; left:-10px; background:#ff7043; color:white; padding:5px 12px; border-radius:5px; font-size:12px; font-weight:600; }
 
     .steps { width: 90%; max-width: 700px; margin: 20px auto; line-height: 1.9; font-size: 17px; text-align: left; }
 
-    /* Why Choose Us Boxes */
     .why-us { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin: 20px auto; }
     .why-box { flex:1 1 250px; background:#fff3ec; border-left:6px solid #ff7043; padding:15px; border-radius:12px; box-shadow:0 3px 8px rgba(255,112,67,0.2); font-size:16px; text-align:center; transition:0.3s; cursor:pointer; }
     .why-box:hover { transform: translateY(-5px); box-shadow:0 6px 15px rgba(255,112,67,0.3); }
 
     .testimonials { width: 90%; max-width: 700px; margin: 30px auto; padding: 25px 20px; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-    .testimonial { margin-bottom: 20px; font-size: 16px; line-height: 1.8; font-style: normal; color: #333; }
+    .testimonial { margin-bottom: 20px; font-size: 16px; line-height: 1.8; font-style: italic; color: #333; }
     .testimonial b { display: block; margin-top: 5px; color: #ff7043; font-weight: 600; }
 
     .offer-box { background:#fff3ec; border-left:6px solid #ff7043; padding:15px; margin-bottom:12px; border-radius:10px; box-shadow:0 3px 8px rgba(255,112,67,0.2); font-size:16px; }
 
     footer { background: #222; padding: 15px; color: #ccc; text-align: center; margin-top: 40px; }
-    .sticky-btn { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; padding: 14px 20px; border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 14px rgba(0,0,0,0.3); z-index: 999; }
+    .sticky-btn { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; padding: 14px 20px; border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 14px rgba(0,0,0,0.3); z-index: 999; transition: transform 0.3s ease; }
+
+    @keyframes fadeIn { 0% { opacity:0; transform: translateY(-20px);} 100% { opacity:1; transform: translateY(0);} }
+
+    @media (max-width: 480px){
+      .button { width:100%; }
+      .pricing-box, .why-box { width:95%; }
+    }
   </style>
 </head>
 
@@ -58,10 +69,9 @@
 </div>
 
 <div class="highlight-box">
-  ⭐ Free Delivery Across Patna<br>
   ⭐ 100% Homemade Food<br>
-  ⭐ Trusted by 100+ Families<br>
-  ⭐ FSSAI License: <b>20425001002296</b>
+  ⭐ FSSAI License: <b>20425001002296</b><br>
+  ⭐ Trusted by 100+ Families
 </div>
 
 <h2>Why Choose Us</h2>
@@ -78,28 +88,26 @@
   <h3>Trial 2 Meals – ₹149</h3>
   <div class="price">₹79 / meal</div>
   <p>Experience our freshly prepared, premium chef’s special meals before subscribing. Includes lunch + dinner combo with a complimentary dessert!</p>
-  <a class="button" href="https://wa.me/919142617150?text=I%20want%20the%20chef's%20special%20trial" target="_blank">🍽️ Try 2 Meals – ₹149</a>
+  <a class="button button-trial" href="https://wa.me/919142617150?text=I%20want%20the%20chef's%20special%20trial" target="_blank">🍽️ Try 2 Meals – ₹149</a>
 </div>
 
 <h2>Our Regular Plan</h2>
 <div class="pricing-box">
+  <div class="popular-ribbon">Popular Choice</div>
   <h3>Lunch + Dinner Combo</h3>
   <div class="price">₹59 / meal</div>
   <p>Complete meals delivered fresh daily.</p>
   <p style="margin-top:5px; color:#ff7043; font-weight:600;">Monthly Plan: ₹3,599 / month – Save more and enjoy hassle-free meals every day!</p>
-  
-  <!-- Increased margin-bottom for badges to avoid overlap with button -->
-  <div class="trust-badges" style="margin-bottom:20px;">
+  <div class="trust-badges">
     ✅ FSSAI Licensed  ✅ 100% Homemade
   </div>
-
   <a class="button" href="https://wa.me/919142617150" target="_blank">🍱 Subscribe Now – ₹59/meal</a>
 </div>
 
 <h2>🎉 Great Offers</h2>
 <div class="steps">
-  <div class="offer-box">🥳 <span class="highlight">First-time joiners:</span> Get <span class="highlight">₹299 OFF</span> for your first month!</div>
-  <div class="offer-box">👨‍👩‍👧 <span class="highlight">Refer friends & family:</span> Get <span class="highlight">₹299 OFF</span> for each referral!</div>
+  <div class="offer-box">🥳 First-time joiners: Get <b>₹299 OFF</b> for your first month!</div>
+  <div class="offer-box">👨‍👩‍👧 Refer friends & family: Get <b>₹299 OFF</b> for each referral!</div>
   <div class="offer-box">🔥 Only 20 trial slots available this week! Hurry!</div>
 </div>
 
