@@ -29,7 +29,11 @@
     .trust-badges { display:flex; justify-content:center; gap:15px; margin-top:10px; font-weight:600; color:#ff7043; }
 
     .steps { width: 90%; max-width: 700px; margin: 20px auto; line-height: 1.9; font-size: 17px; text-align: left; }
-    .highlight { color: #ff7043; font-weight: 700; }
+
+    /* Why Choose Us Boxes */
+    .why-us { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin: 20px auto; }
+    .why-box { flex:1 1 250px; background:#fff3ec; border-left:6px solid #ff7043; padding:15px; border-radius:12px; box-shadow:0 3px 8px rgba(255,112,67,0.2); font-size:16px; text-align:center; transition:0.3s; cursor:pointer; }
+    .why-box:hover { transform: translateY(-5px); box-shadow:0 6px 15px rgba(255,112,67,0.3); }
 
     .testimonials { width: 90%; max-width: 700px; margin: 30px auto; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
     .testimonial { margin-bottom: 18px; font-size: 15px; line-height: 1.6; }
@@ -60,14 +64,12 @@
 </div>
 
 <h2>Why Choose Us</h2>
-<div class="steps">
-  🔹 Freshly cooked <span class="highlight">homemade meals</span> — just like your home kitchen<br>
-  🔹 <span class="highlight">FSSAI-licensed</span> hygienic setup for complete food safety<br>
-  🔹 Daily changing menu to enjoy variety without repetition<br>
-  🔹 Free delivery anywhere in Patna, always on time<br>
-  🔹 Trusted by 100+ families, students & working professionals<br>
-  🔹 Premium taste at the <span class="highlight">most affordable daily price</span><br>
-  🔹 Zero preservatives, zero compromise — only clean, healthy food<br>
+<div class="why-us">
+  <div class="why-box">🍲 <b>Fresh Homemade Meals</b><br>Just like your home kitchen</div>
+  <div class="why-box">✅ <b>FSSAI Licensed</b><br>Hygienic & safe food</div>
+  <div class="why-box">🥗 <b>Variety Menu</b><br>Daily rotation for fresh taste</div>
+  <div class="why-box">🚚 <b>Free Delivery</b><br>On-time, anywhere in Patna</div>
+  <div class="why-box">🌟 <b>Trusted by 100+ Families</b><br>Students & professionals</div>
 </div>
 
 <h2>🎉 Chef’s Special Trial – Try & Taste</h2>
