@@ -22,7 +22,7 @@
     .button { background-color: #ff7043; color: white; padding: 12px 25px; text-decoration: none; border-radius: 10px; font-weight: 600; min-width: 170px; text-align: center; box-shadow: 0 4px 10px rgba(255,112,67,0.4); transition: 0.3s; }
     .button:hover { background-color: #e85e2e; }
 
-    .pricing-box { background: white; padding: 22px; width: 90%; max-width: 500px; margin: 20px auto; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; }
+    .pricing-box { background: white; padding: 22px; width: 90%; max-width: 500px; margin: 20px auto; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; position:relative; }
     .pricing-box h3 { margin-bottom: 10px; }
     .price { font-size: 34px; color: #ff7043; font-weight: 700; }
     .price-small { font-size: 18px; color: #ff7043; font-weight: 600; margin-top:5px; }
@@ -43,6 +43,9 @@
 
     footer { background: #222; padding: 15px; color: #ccc; text-align: center; margin-top: 40px; }
     .sticky-btn { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; padding: 14px 20px; border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 14px rgba(0,0,0,0.3); z-index: 999; }
+
+    /* Popular Ribbon */
+    .popular-ribbon { position:absolute; top:-10px; left:-10px; background:#ff7043; color:white; padding:5px 12px; border-radius:5px; font-size:12px; font-weight:600; }
   </style>
 </head>
 
@@ -81,18 +84,16 @@
   <a class="button" href="https://wa.me/919142617150?text=I%20want%20the%20chef's%20special%20trial" target="_blank">🍽️ Try 2 Meals – ₹149</a>
 </div>
 
-<h2>Our Regular Plan</h2>
-<div class="pricing-box">
+<h2>Our Popular Plan</h2>
+<div class="pricing-box" style="background: linear-gradient(145deg, #fff8f0, #fff3e6); border:2px solid #ff7043;">
+  <div class="popular-ribbon">🌟 Most Loved</div>
   <h3>Lunch + Dinner Combo</h3>
   <div class="price">₹59 / meal</div>
-  <p>Complete meals delivered fresh daily.</p>
+  <p>Our premium, freshly cooked meals delivered daily – loved by 100+ families!</p>
   <p style="margin-top:5px; color:#ff7043; font-weight:600;">Monthly Plan: ₹3,599 / month – Save more and enjoy hassle-free meals every day!</p>
-  
-  <!-- Increased margin-bottom for badges to avoid overlap with button -->
   <div class="trust-badges" style="margin-bottom:20px;">
     ✅ FSSAI Licensed  ✅ 100% Homemade
   </div>
-
   <a class="button" href="https://wa.me/919142617150" target="_blank">🍱 Subscribe Now – ₹59/meal</a>
 </div>
 
