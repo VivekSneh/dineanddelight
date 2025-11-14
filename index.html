@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dine & Delight | Patna's Premium Tiffin Service</title>
+  <title>Dine & Delight | Patna's Trusted Tiffin Service</title>
   <meta name="description" 
         content="Patna's No.1 Tiffin Service trusted by 100+ families. Completely homemade, hygienic, FSSAI licensed. Free delivery. WhatsApp to order instantly." />
 
@@ -29,69 +29,32 @@
       font-size: 22px;
       font-weight: 700;
       color: #ff7043;
-      position: sticky;
-      top: 0;
-      z-index: 100;
     }
 
     /* HERO SECTION */
     .hero {
-      position: relative;
-      background: linear-gradient(rgba(255,112,67,0.45), rgba(255,112,67,0.15)), 
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), 
                   url('https://raw.githubusercontent.com/viveksneh/dineanddelight/main/assets/banner.jpg') center/cover no-repeat;
-      padding: 100px 20px 150px 20px;
+      padding: 80px 20px;
       text-align: center;
       color: #fff;
       border-radius: 0 0 20px 20px;
-      overflow: hidden;
+      box-shadow: inset 0 0 100px rgba(0,0,0,0.2);
     }
     .hero h1 {
-      font-size: 38px;
-      font-weight: 800;
-      text-shadow: 0 4px 20px rgba(0,0,0,0.5);
-      color: #fff;
+      font-size: 36px;
+      font-weight: 700;
+      text-shadow: 0 2px 15px rgba(0,0,0,0.6);
+      background: rgba(255, 255, 255, 0.15);
       display: inline-block;
-      padding: 15px 25px;
-      border-radius: 15px;
-      background: rgba(0,0,0,0.2);
-      animation: glow 2s ease-in-out infinite alternate;
-    }
-    @keyframes glow {
-      0% { text-shadow: 0 0 8px #fff, 0 0 12px #ff7043; }
-      100% { text-shadow: 0 0 15px #fff, 0 0 30px #ff5722; }
+      padding: 10px 20px;
+      border-radius: 12px;
     }
     .hero p {
       font-size: 20px;
-      margin-top: 20px;
+      margin-top: 15px;
       font-weight: 500;
-      text-shadow: 0 2px 12px rgba(0,0,0,0.6);
-    }
-
-    /* FLOATING BUTTONS ON HERO */
-    .hero-buttons {
-      position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-    .hero-buttons a {
-      padding: 14px 28px;
-      border-radius: 50px;
-      font-weight: 600;
-      color: white;
-      text-decoration: none;
-      background: #ff7043;
-      box-shadow: 0 4px 20px rgba(255,112,67,0.5);
-      transition: 0.3s;
-      font-size: 16px;
-    }
-    .hero-buttons a:hover {
-      background: #e85e2e;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 25px rgba(255,112,67,0.6);
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
     }
 
     /* MAIN BOX */
@@ -140,7 +103,7 @@
       background-color: #e85e2e;
     }
 
-    /* PRICING */
+    /* PRICING SECTION */
     .pricing-box {
       background: white;
       padding: 22px;
@@ -160,7 +123,7 @@
       font-weight: 700;
     }
 
-    /* STEPS / INFO */
+    /* WHY CHOOSE US & OTHER INFO */
     .steps {
       width: 90%;
       max-width: 700px;
@@ -213,12 +176,6 @@
       box-shadow: 0 4px 14px rgba(0,0,0,0.3);
       z-index: 999;
     }
-
-    @media(max-width:600px){
-      .hero h1 { font-size: 28px; padding: 10px 18px; }
-      .hero p { font-size: 16px; }
-      .hero-buttons a { font-size: 14px; padding: 12px 20px; }
-    }
   </style>
 </head>
 
@@ -231,11 +188,6 @@
 <div class="hero">
   <h1>Fresh • Homemade • Hygienic</h1>
   <p>Delicious tiffins delivered daily with ❤️ and care</p>
-
-  <div class="hero-buttons">
-    <a href="https://wa.me/919142617150" target="_blank">📞 WhatsApp</a>
-    <a href="https://wa.me/919142617150?text=Show%20me%20today's%20menu" target="_blank">📋 View Menu</a>
-  </div>
 </div>
 
 <div class="highlight-box">
@@ -245,6 +197,13 @@
   ⭐ FSSAI License: <b>20425001002296</b>
 </div>
 
+<h2>Order Instantly</h2>
+<div class="button-container">
+  <a class="button" href="https://wa.me/919142617150" target="_blank">📞 WhatsApp</a>
+  <a class="button" href="https://wa.me/919142617150?text=Show%20me%20today's%20menu" target="_blank">📋 View Menu</a>
+  <a class="button" href="https://share.google/0he2u6jxRmV2cFOOL" target="_blank">⭐ Google Reviews</a>
+</div>
+
 <h2>Our Bestselling Monthly Plan</h2>
 <div class="pricing-box">
   <h3>Lunch + Dinner Combo</h3>
@@ -252,23 +211,26 @@
   <p>Complete Meals • Free Delivery • Daily Rotation</p>
 </div>
 
+<!-- WHY CHOOSE US -->
 <h2>Why Choose Us</h2>
 <div class="steps">
   🔹 Freshly cooked <span class="highlight">homemade meals</span> — just like your home kitchen<br>
   🔹 <span class="highlight">FSSAI-licensed</span> hygienic setup for complete food safety<br>
-  🔹 Daily changing menu for variety<br>
+  🔹 Daily changing menu to enjoy variety without repetition<br>
   🔹 Free delivery anywhere in Patna, always on time<br>
   🔹 Trusted by 100+ families, students & working professionals<br>
   🔹 Premium taste at the <span class="highlight">most affordable monthly price</span> in the city<br>
   🔹 Zero preservatives, zero compromise — only clean, healthy food<br>
 </div>
 
+<!-- WHAT WE SERVE -->
 <h2>What We Serve</h2>
 <div class="steps">
   🔹 We serve <span class="highlight">Pure Veg</span> and <span class="highlight">Non-Veg</span> meals freshly cooked every day<br>
   🔹 100% homemade, hygienic, rich in taste & nutrition<br>
 </div>
 
+<!-- MEAL TIMINGS -->
 <h2>Our Meal Timings</h2>
 <div class="steps">
   🍽️ <span class="highlight">Breakfast:</span> 8:30 AM – 9:30 AM<br>
