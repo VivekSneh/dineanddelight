@@ -1,160 +1,389 @@
-<!-- PREMIUM CODE START --><!DOCTYPE html><html lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dine & Delight | Premium Tiffin Service</title>  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #f8f8f8;
-      color: #222;
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dine & Delight — Veg & Non-Veg Tiffins (Patna)</title>
+  <meta name="description" content="Dine & Delight — Fresh homemade breakfast, lunch & dinner (veg & non-veg) delivered across Patna. FSSAI licensed. Try trial meals or subscribe monthly. Order on WhatsApp +91 9142617150." />
+  <meta name="theme-color" content="#25D366" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dine & Delight — Veg & Non-Veg Tiffins (Patna)">
+  <meta property="og:description" content="Breakfast, one-time meals and monthly plans. Weekly veg & non-veg menus. Hygienic & home-style." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/viveksneh/dineanddelight/main/assets/banner.jpg" />
+  <meta property="og:type" content="website">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent:#ff7043;
+      --accent-dark:#e85e2e;
+      --bg:#fffdf8;
+      --muted:#666;
+      --card:#fff8f3;
+      --radius:12px;
+      --max-width:1020px;
+      --whatsapp:#25D366;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      font-family:'Poppins',sans-serif;
+      margin:0;
+      background:var(--bg);
+      color:#222;
+      line-height:1.45;
+      -webkit-font-smoothing:antialiased;
     }
 
-    /* Premium Hero */
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://i.imgur.com/1e8BVnO.jpeg');
-      background-size: cover;
-      background-position: center;
-      padding: 120px 20px;
-      text-align: center;
-      color: white;
+    .container{max-width:var(--max-width);margin:0 auto;padding:18px;}
+    header{display:flex;justify-content:space-between;align-items:center;padding:10px 0;gap:12px;flex-wrap:wrap}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:56px;height:56px;border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),#ff9a6b);
+      display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;box-shadow:0 6px 18px rgba(255,112,67,0.18)
     }
-    .hero h1 {
-      font-size: 42px;
-      font-weight: 700;
+    .brand h1{margin:0;font-size:18px;color:var(--accent)}
+    .brand p{margin:0;font-size:12px;color:var(--muted)}
+
+    .header-ctas{display:flex;gap:10px;align-items:center}
+    .cta{background:var(--accent);color:#fff;padding:9px 14px;border-radius:10px;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(255,112,67,0.16)}
+    .cta.secondary{background:#fff;border:1px solid #ffe7df;color:var(--accent);padding:8px 12px}
+
+    /* HERO */
+    .hero{
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.24), rgba(0,0,0,0.24)),
+        url('https://raw.githubusercontent.com/viveksneh/dineanddelight/main/assets/banner.jpg') center/cover no-repeat;
+      border-radius:18px;padding:38px 18px;color:#fff;margin-bottom:16px;box-shadow:0 10px 30px rgba(0,0,0,0.12);
     }
-    .hero p {
-      font-size: 18px;
-      opacity: 0.9;
+    .hero .title{font-size:24px;margin:0 0 8px 0;font-weight:700;text-shadow:0 6px 20px rgba(0,0,0,0.4);display:inline-block;background:rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px}
+    .hero .lead{margin:0;font-size:15px;opacity:0.95}
+
+    .lead-cta{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .pill{background:#fff;padding:8px 12px;border-radius:999px;border:1px solid #ffeae0;font-weight:700;color:var(--accent)}
+
+    /* quick badges */
+    .info-row{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0;justify-content:center}
+    .badge{background:var(--card);padding:10px 12px;border-radius:12px;min-width:150px;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,0.05);font-weight:700;color:var(--accent)}
+    .badge small{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:6px}
+
+    /* layout */
+    .grid{display:grid;grid-template-columns:1fr;gap:14px}
+    @media(min-width:980px){.grid{grid-template-columns:1fr 380px}}
+
+    .card{background:#fff;padding:14px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(15,15,15,0.04)}
+
+    /* section headings */
+    h2.section{margin:0 0 8px 0;color:var(--accent);font-size:18px}
+
+    /* pricing cards */
+    .pricing{display:flex;flex-direction:column;gap:10px}
+    .plan{display:flex;flex-direction:column;padding:14px;border-radius:12px;background:linear-gradient(180deg,#fffefc,#fff6f0);border-left:6px solid var(--accent);position:relative}
+    .plan h4{margin:0;font-size:16px}
+    .price-line{display:flex;align-items:center;gap:12px;margin-top:8px}
+    .price-old{text-decoration:line-through;color:#999;font-weight:700}
+    .price-now{font-weight:900;color:var(--accent);font-size:20px}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* menu list */
+    .menu-list{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+    .menu-day{background:#fff;padding:10px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.04)}
+    .menu-day h4{margin:0;font-size:15px}
+    .menu-day p{margin:6px 0 0;color:var(--muted)}
+
+    /* gallery */
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+    @media(min-width:600px){.gallery{grid-template-columns:repeat(3,1fr)}}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:10px;cursor:pointer;display:block}
+
+    /* steps */
+    .process{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .step{flex:1 1 120px;background:#fff3ec;padding:10px;border-radius:10px;text-align:center;font-weight:700;color:var(--accent)}
+
+    /* testimonial */
+    .testi{display:flex;flex-direction:column;gap:8px}
+    .titem{background:#fff;padding:12px;border-radius:10px}
+
+    footer{padding:18px 0;text-align:center;color:#666;margin-top:18px;font-size:14px}
+
+    /* sticky whatsapp */
+    .sticky{
+      position:fixed;right:16px;bottom:16px;background:var(--whatsapp);color:#fff;padding:12px 16px;border-radius:999px;font-weight:800;box-shadow:0 12px 36px rgba(0,0,0,0.16);text-decoration:none;z-index:999;display:flex;gap:8px;align-items:center
     }
 
-    /* Pricing Section */
-    .pricing-section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .pricing-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .price-card {
-      background: white;
-      padding: 25px;
-      border-radius: 18px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
-    .price-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 26px rgba(0,0,0,0.12);
-    }
-    .price-card h3 {
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-    .price-card .price {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-    .old-price {
-      text-decoration: line-through;
-      font-size: 17px;
-      color: #888;
-    }
-    .order-btn {
-      margin-top: 12px;
-      display: inline-block;
-      background: #25D366;
-      color: white;
-      padding: 10px 18px;
-      border-radius: 10px;
-      font-size: 16px;
-      text-decoration: none;
-      font-weight: 600;
-    }
+    /* lightbox */
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.8);display:none;align-items:center;justify-content:center;padding:18px;z-index:1200}
+    .lightbox img{max-width:92%;max-height:86%;border-radius:10px}
+    .close-x{position:absolute;top:18px;right:18px;color:#fff;font-size:22px;font-weight:700;cursor:pointer}
 
-    /* Why Choose Us */
-    .why-us {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
+    .muted{color:var(--muted);font-size:13px}
+    a.small-link{color:var(--accent);font-weight:700;text-decoration:none}
+
+    /* small responsive tweaks */
+    @media(max-width:480px){
+      .brand h1{font-size:16px}
+      .hero .title{font-size:20px}
     }
-    .why-us h2 {
-      text-align: center;
-    }
-    .why-us ul li {
-      margin: 10px 0;
-      font-size: 18px;
-      font-weight: 500;
-    }
+  </style>
 
-    /* Footer */
-    .footer {
-      background: #222;
-      color: white;
-      padding: 25px;
-      text-align: center;
-      margin-top: 40px;
-    }
+  <!-- JSON-LD LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "Dine & Delight",
+    "description": "Veg & Non-Veg homemade meals (breakfast, lunch, dinner), delivered across Patna. FSSAI licensed. Weekly menus and monthly subscriptions.",
+    "telephone": "+91 9142617150",
+    "alternateName": "Dine & Delight Tiffin",
+    "priceRange": "₹",
+    "servesCuisine": "Indian, Homemade",
+    "areaServed": { "@type": "City", "name": "Patna" },
+    "url": "https://viveksneh.github.io/dineanddelight/",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "120" }
+  }
+  </script>
 
-    /* Floating WhatsApp */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      padding: 14px 16px;
-      border-radius: 50%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-  </style></head>
-<body>  <div class="hero">
-    <h1>Dine & Delight</h1>
-    <p>Premium Veg & Non‑Veg Tiffin Service • Fresh • Hygienic • Daily Delivery</p>
-  </div>  <section class="pricing-section">
-    <h2>Our Monthly Plans</h2><div class="pricing-container">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand" aria-label="Dine & Delight brand">
+        <div class="logo">D&amp;D</div>
+        <div>
+          <h1>Dine & Delight</h1>
+          <p>Homemade • Veg & Non-Veg • Breakfast, Lunch, Dinner • FSSAI: 20425001002296</p>
+        </div>
+      </div>
 
-  <div class="price-card">
-    <h3>Veg – Lunch + Dinner</h3>
-    <p class="price"><span class="old-price">₹3600</span> ₹3400</p>
-    <a class="order-btn" href="https://wa.me/9142617150">Order Now</a>
-  </div>
+      <div class="header-ctas">
+        <!-- Primary WhatsApp action uses primary number; alternate shown below -->
+        <a class="cta" href="https://wa.me/919142617150?text=Hi%20I%20want%20to%20order" target="_blank" id="whatsappPrimary">Order on WhatsApp</a>
+        <a class="cta secondary" href="https://share.google/0he2u6jxRmV2cFOOL" target="_blank">Google Reviews</a>
+      </div>
+    </header>
 
-  <div class="price-card">
-    <h3>Non‑Veg – Lunch + Dinner</h3>
-    <p class="price"><span class="old-price">₹3900</span> ₹3600</p>
-    <a class="order-btn" href="https://wa.me/9142617150">Order Now</a>
-  </div>
+    <!-- HERO -->
+    <section class="hero" aria-label="Fresh meals">
+      <div class="title">Homemade • Hygienic • Delivered Daily</div>
+      <p class="lead">Breakfast, one-time meals and monthly subscriptions — Veg & Non-Veg options. Try Chef's trial (2 meals) or subscribe monthly and save.</p>
 
-  <div class="price-card">
-    <h3>Pure Veg – Breakfast + Lunch + Dinner</h3>
-    <p class="price"><span class="old-price">₹4700</span> ₹4499</p>
-    <a class="order-btn" href="https://wa.me/9142617150">Order Now</a>
-  </div>
+      <div class="lead-cta">
+        <a class="cta" href="https://wa.me/919142617150?text=I%20want%20the%20trial" target="_blank">Try 2 Meals ₹149</a>
+        <a class="pill" href="#plans">View Plans</a>
+        <span class="pill">Free delivery in Patna • Call: +91 91426 17150</span>
+      </div>
+    </section>
 
-  <div class="price-card">
-    <h3>Veg + Non‑Veg – Breakfast + Lunch + Dinner</h3>
-    <p class="price"><span class="old-price">₹4900</span> ₹4599</p>
-    <a class="order-btn" href="https://wa.me/9142617150">Order Now</a>
-  </div>
+    <!-- Badges -->
+    <div class="info-row" role="list">
+      <div class="badge" role="listitem">🚚 Free delivery <small>Across Patna</small></div>
+      <div class="badge" role="listitem">🍲 Veg & Non-Veg <small>Daily rotation</small></div>
+      <div class="badge" role="listitem">🔒 Hygienic kitchen <small>FSSAI licensed</small></div>
+    </div>
 
-</div>
+    <!-- MAIN GRID -->
+    <main class="grid">
+      <!-- LEFT column -->
+      <section>
+        <!-- PLANS (Monthly + One-time + Breakfast) -->
+        <div id="plans" class="card">
+          <h2 class="section">Plans & Prices</h2>
+          <p class="muted" style="margin-bottom:8px;">Monthly plans show original price struck and the current offer price — limited slots each week.</p>
 
-  </section>  <section class="why-us">
-    <h2>Why Choose Us?</h2>
-    <ul>
-      <li>Freshly prepared food every day</li>
-      <li>Veg & Non‑Veg both available</li>
-      <li>Breakfast, Lunch & Dinner packages</li>
-      <li>Best hygiene & home‑like cooking</li>
-      <li>Fast doorstep delivery</li>
-    </ul>
-  </section>  <div class="footer">© 2025 Dine & Delight – All Rights Reserved.</div>  <a href="https://wa.me/9142617150" class="whatsapp-float">
-    <img src="https://i.imgur.com/8QfZ7Wz.png" width="40" />
-  </a></body>
-</html>
-<!-- PREMIUM CODE END -->
+          <div class="pricing">
+            <!-- Veg Monthly plan -->
+            <div class="plan" aria-label="Veg monthly plan">
+              <h4>🍛 Veg — Lunch + Dinner Combo (Monthly)</h4>
+              <div class="price-line">
+                <div class="price-old">₹3,600</div>
+                <div class="price-now">₹3,400 / month</div>
+                <div style="margin-left:auto" class="small">~ ₹60 / meal</div>
+              </div>
+              <p class="muted" style="margin-top:8px">Original price ₹3,600 shown to highlight discount. Subscribe monthly and save. Includes daily lunch + dinner.</p>
+              <div style="margin-top:8px;display:flex;gap:8px;">
+                <a class="cta" href="https://wa.me/919142617150?text=I%20want%20veg%20monthly%20subscription" target="_blank">Subscribe Veg ₹3,400</a>
+                <a class="cta secondary" href="https://wa.me/919142617150?text=I%20want%20veg%20trial" target="_blank">Try Trial ₹149</a>
+              </div>
+            </div>
+
+            <!-- Non-Veg Monthly plan -->
+            <div class="plan" aria-label="Non veg monthly plan">
+              <h4>🍗 Non-Veg — Lunch + Dinner Combo (Monthly)</h4>
+              <div class="price-line">
+                <div class="price-old">₹3,900</div>
+                <div class="price-now">₹3,600 / month</div>
+                <div style="margin-left:auto" class="small">~ ₹65 / meal</div>
+              </div>
+              <p class="muted" style="margin-top:8px">Original price ₹3,900 shown to highlight discount. Best for non-veg lovers. Includes daily lunch + dinner.</p>
+              <div style="margin-top:8px;display:flex;gap:8px;">
+                <a class="cta" href="https://wa.me/919142617150?text=I%20want%20nonveg%20monthly%20subscription" target="_blank">Subscribe Non-Veg ₹3,600</a>
+                <a class="cta secondary" href="https://wa.me/919142617150?text=I%20want%20nonveg%20trial" target="_blank">Try Trial ₹149</a>
+              </div>
+            </div>
+
+            <!-- Breakfast / One-time meals -->
+            <div class="plan" aria-label="Breakfast and one-time">
+              <h4>🍳 Breakfast & One-time Meals</h4>
+              <div class="price-line">
+                <div class="price-now">Breakfast ₹40 / meal</div>
+                <div style="margin-left:auto" class="small">One-time Lunch/Dinner: from ₹80</div>
+              </div>
+              <p class="muted" style="margin-top:8px">We deliver breakfast separately. Also offer one-time lunch/dinner orders — useful for guests or special days.</p>
+              <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;">
+                <a class="cta" href="https://wa.me/919142617150?text=I%20want%20one%20time%20meal" target="_blank">Order One-time Meal</a>
+                <a class="cta secondary" href="https://wa.me/919142617150?text=I%20want%20breakfast%20today" target="_blank">Order Breakfast</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WEEKLY MENUS -->
+        <div style="margin-top:14px" class="card" id="weekly">
+          <h2 class="section">Weekly Menus (Mon–Sun)</h2>
+          <p class="muted" style="margin:0 0 10px 0">We publish both Veg & Non-Veg weekly rotations. Below are sample weekly menus. (Customers can request veg or non-veg on subscription.)</p>
+
+          <!-- Veg weekly -->
+          <div style="margin-top:12px">
+            <h3 style="margin:0 0 8px 0;color:var(--accent)">🌿 Veg — Weekly Menu</h3>
+
+            <div class="menu-list">
+              <div class="menu-day">
+                <h4>MONDAY — Jeera Rice, Rajma Curry</h4>
+                <p class="muted">Lunch: Jeera rice, Rajma, salad, achar. Dinner: Roti, Aloo–Soybean curry, salad.</p>
+              </div>
+
+              <div class="menu-day">
+                <h4>TUESDAY — Dal Fry / Seasonal Veg</h4>
+                <p class="muted">Lunch: Dal fry, seasonal veg, roti/rice. Dinner: Puri & Chhole (sweet on request).</p>
+              </div>
+
+              <div class="menu-day">
+                <h4>WEDNESDAY — Rice + Arhar Dal</h4>
+                <p class="muted">Lunch: Rice & dal, salad. Dinner: Roti + mixed veg curry.</p>
+              </div>
+
+              <div class="menu-day">
+                <h4>THURSDAY — Kadhi Pakora with Rice</h4>
+                <p class="muted">Lunch: Kadhi pakora, rice. Dinner: Kachori + veg curry + sweet.</p>
+              </div>
+
+              <div class="menu-day">
+                <h4>FRIDAY — Mixed Dal & Seasonal Veg</h4>
+                <p class="muted">Lunch: Mixed dal, seasonal veg. Dinner: Roti / Fried rice + sabji.</p>
+              </div>
+
+              <div class="menu-day">
+                <h4>SATURDAY — Chana Sabji, Sattu Paratha (special)</h4>
+                <p class="muted">Lunch: Chana sabji, dal, salad. Dinner: Sattu paratha with chana–aloo curry.</p>
+              </div>
+
+              <div class="menu-day">
+                <h4>SUNDAY — Jeera Rice, Paneer Curry</h4>
+                <p class="muted">Lunch: Paneer curry, dal fry. Dinner: Roti, tadka dal, bhujia (chef's choice).</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Non-Veg weekly -->
+          <div style="margin-top:14px">
+            <h3 style="margin:0 0 8px 0;color:var(--accent)">🍗 Non-Veg — Weekly Menu</h3>
+
+            <div class="menu-list">
+              <div class="menu-day">
+                <h4>MONDAY — Jeera Rice, Chicken Curry (Special)</h4>
+                <p class="muted">Lunch: Chicken curry with rice. Dinner: Roti + veggie side.</p>
+              </div>
+
+              <div class="menu-day">
+                <h4>TUESDAY — Egg Curry / Dal</h4>
+                <p class="muted">Lunch: Egg curry + rice. Dinner: Chhole / dal fry (egg optional).</p>
+              </div>
+
+              <div class="menu-day">
+                <h4>WEDNESDAY — Special Chicken / Paneer Mix</h4>
+                <p class="muted">Lunch: Special chicken curry option. Dinner: Mixed veg + roti.</p>
+              </div>
+
+              <div class="menu-day">
+                <h4>THURSDAY — Mutton/Chicken (Chef's choice)</h4>
+                <p class="muted">Lunch: Hearty non-veg curry. Dinner: Lighter veg side.</p>
+              </div>
+
+              <div class="menu-day">
+                <h4>FRIDAY — Fish/Egg options</h4>
+                <p class="muted">Varies week to week — we announce daily menus on WhatsApp.</p>
+              </div>
+
+              <div class="menu-day">
+                <h4>SATURDAY — Non-Veg Special</h4>
+                <p class="muted">Weekend special for non-veg subscribers.</p>
+              </div>
+
+              <div class="menu-day">
+                <h4>SUNDAY — Chef's Non-Veg Thali</h4>
+                <p class="muted">Special preparations and larger portions for family day.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px">
+            <a class="cta" href="https://wa.me/919142617150?text=I%20want%20to%20subscribe%20monthly" target="_blank">Subscribe / Ask Today's Menu</a>
+          </div>
+        </div>
+
+        <!-- Gallery -->
+        <div style="margin-top:14px" class="card">
+          <h2 class="section">Gallery</h2>
+          <p class="muted" style="margin:0 0 10px 0">Replace these placeholders with your real photos in `assets/` for better conversions.</p>
+          <div class="gallery" id="gallery">
+            <!-- Put your real images in assets folder and keep these filenames:
+                 assets/banner.jpg, assets/meal1.jpg, assets/meal2.jpg, assets/meal3.jpg, assets/meal4.jpg, assets/whatsapp-qr.png
+                 If you don't upload, unsplash placeholders will remain. -->
+            <img src="https://raw.githubusercontent.com/viveksneh/dineanddelight/main/assets/meal1.jpg" alt="Meal 1">
+            <img src="https://raw.githubusercontent.com/viveksneh/dineanddelight/main/assets/meal2.jpg" alt="Meal 2">
+            <img src="https://raw.githubusercontent.com/viveksneh/dineanddelight/main/assets/meal3.jpg" alt="Meal 3">
+            <img src="https://raw.githubusercontent.com/viveksneh/dineanddelight/main/assets/meal4.jpg" alt="Meal 4">
+            <img src="https://raw.githubusercontent.com/viveksneh/dineanddelight/main/assets/meal5.jpg" alt="Meal 5">
+            <img src="https://raw.githubusercontent.com/viveksneh/dineanddelight/main/assets/meal6.jpg" alt="Meal 6">
+          </div>
+        </div>
+
+        <!-- About + hygiene -->
+        <div style="margin-top:14px" class="card">
+          <h2 class="section">About Us & Hygiene</h2>
+          <p class="muted">Dine & Delight provides homemade, hygienic meals across Patna. We cook daily using fresh ingredients and follow strict kitchen sanitation, temperature-controlled packing, and weekly health checks for staff.</p>
+
+          <div class="process" style="margin-top:8px">
+            <div class="step">🥗 Fresh Ingredients</div>
+            <div class="step">🧼 Clean Kitchen</div>
+            <div class="step">👩‍🍳 Trained Staff</div>
+            <div class="step">🚚 Daily Delivery</div>
+          </div>
+
+          <p class="muted" style="margin-top:10px">FSSAI License: <strong>20425001002296</strong>. We separate veg & non-veg prep areas and accept special diet requests on WhatsApp.</p>
+        </div>
+      </section>
+
+      <!-- RIGHT column -->
+      <aside>
+        <div class="card">
+          <h2 class="section">Current Offers</h2>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="background:linear-gradient(90deg,#fff8f3,#fff2ea);padding:10px;border-radius:10px;border-left:5px solid var(--accent);font-weight:800">🎉 New customers: ₹299 OFF first month — Code: WELCOME299</div>
+            <div style="background:linear-gradient(90deg,#fff8f3,#fff2ea);padding:10px;border-radius:10px;border-left:5px solid var(--accent);font-weight:800">👥 Refer & Earn: ₹299 OFF per successful referral</div>
+            <div style="background:linear-gradient(90deg,#fff8f3,#fff2ea);padding:10px;border-radius:10px;border-left:5px solid var(--accent);font-weight:800">🔥 Limited trial slots: 20 / week — Book now</div>
+          </div>
+
+          <div style="margin-top:12px">
+            <a class="cta" href="https://wa.me/919142617150?text=I%20want%20to%20claim%20offer" target="_blank">Claim Offer / Trial</a>
+          </div>
+        </div>
+
+        <div style="margin-top:12px" class="card testi">
+          <h2 class="section">What customers say</h2>
+          <div class="titem">"Tiffin tastes like home — timely delivery and hygienic." <div class="muted">— Ravi K., Patna</div></div>
+          <div class="titem">"Good portions and honest prices." <div class="muted">— Neha S.</
