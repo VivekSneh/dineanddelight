@@ -30,7 +30,6 @@
 
     .steps { width: 90%; max-width: 700px; margin: 20px auto; line-height: 1.9; font-size: 17px; text-align: left; }
 
-    /* Why Choose Us Boxes */
     .why-us { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin: 20px auto; }
     .why-box { flex:1 1 250px; background:#fff3ec; border-left:6px solid #ff7043; padding:15px; border-radius:12px; box-shadow:0 3px 8px rgba(255,112,67,0.2); font-size:16px; text-align:center; transition:0.3s; cursor:pointer; }
     .why-box:hover { transform: translateY(-5px); box-shadow:0 6px 15px rgba(255,112,67,0.3); }
@@ -44,8 +43,42 @@
     footer { background: #222; padding: 15px; color: #ccc; text-align: center; margin-top: 40px; }
     .sticky-btn { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; padding: 14px 20px; border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 14px rgba(0,0,0,0.3); z-index: 999; }
 
-    /* Popular Ribbon */
     .popular-ribbon { position:absolute; top:-10px; left:-10px; background:#ff7043; color:white; padding:5px 12px; border-radius:5px; font-size:12px; font-weight:600; }
+
+    /* --- NEW BOOSTER STYLES --- */
+
+    @keyframes glowPrice {
+      0% { text-shadow: 0 0 5px #ff9e7a; }
+      50% { text-shadow: 0 0 15px #ff7043; }
+      100% { text-shadow: 0 0 5px #ff9e7a; }
+    }
+    .glow-price { animation: glowPrice 1.5s infinite; }
+
+    @keyframes blink { 50% { opacity: 0.3; } }
+    .blink { animation: blink 1.4s infinite; }
+
+    .countdown-box {
+      background: #ffefe6;
+      padding: 8px 12px;
+      display: inline-block;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-size: 15px;
+      color: #ff7043;
+      font-weight: 600;
+    }
+
+    .coupon-badge {
+      background: #28a745;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      margin-bottom: 10px;
+      display: inline-block;
+      font-weight: 600;
+    }
+
   </style>
 </head>
 
@@ -84,18 +117,42 @@
   <a class="button" href="https://wa.me/919142617150?text=I%20want%20the%20chef's%20special%20trial" target="_blank">🍽️ Try 2 Meals – ₹149</a>
 </div>
 
+<!-- 🔥 UPDATED POPULAR PLAN INTEGRATED BELOW -->
 <h2>Our Popular Plan</h2>
 <div class="pricing-box" style="background: linear-gradient(145deg, #fff8f0, #fff3e6); border:2px solid #ff7043;">
+
   <div class="popular-ribbon">🌟 Most Loved</div>
+
+  <div class="blink" style="color:#ff7043; font-weight:700; font-size:14px; margin-bottom:10px;">
+    🔥 32 customers purchased this plan today
+  </div>
+
   <h3>Lunch + Dinner Combo</h3>
+
   <div class="price">₹60 / meal</div>
+
   <p>Our premium, freshly cooked meals delivered daily – loved by 100+ families!</p>
-  <p style="margin-top:5px; color:#ff7043; font-weight:600;">Monthly Plan: ₹3,599 / month – Save more and enjoy hassle-free meals every day!</p>
-  <div class="trust-badges" style="margin-bottom:20px;">
+
+  <div class="coupon-badge">✔️ Coupon Applied: ₹201 OFF</div>
+
+  <p style="margin-top:5px; font-weight:600; font-size:18px;">
+    Monthly Plan:
+    <span style="text-decoration:line-through; color:#999;">₹3600</span>
+    <span class="glow-price" style="color:#ff7043; font-weight:700; font-size:22px;">₹3399</span>
+    / month
+  </p>
+
+  <div class="countdown-box">
+    ⏳ Offer ends in <span id="timer">Loading...</span>
+  </div>
+
+  <div class="trust-badges" style="margin-top:15px; margin-bottom:20px;">
     ✅ FSSAI Licensed  ✅ 100% Homemade
   </div>
+
   <a class="button" href="https://wa.me/919142617150" target="_blank">🍱 Subscribe Now – ₹60/meal</a>
 </div>
+<!-- END POPULAR PLAN -->
 
 <h2>🎉 Great Offers</h2>
 <div class="steps">
@@ -124,6 +181,28 @@
 </footer>
 
 <a href="https://wa.me/919142617150?text=I%20want%20the%20chef's%20special%20trial" class="sticky-btn">🎉 Try 2 Meals ₹149</a>
+
+<!-- Countdown Script -->
+<script>
+  function startCountdown() {
+    const now = new Date();
+    const midnight = new Date();
+
+    midnight.setHours(23, 59, 59, 999);
+
+    let diff = midnight - now;
+
+    let hours = Math.floor(diff / (1000 * 60 * 60));
+    let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById("timer").innerHTML =
+      hours + "h " + minutes + "m " + seconds + "s";
+  }
+
+  setInterval(startCountdown, 1000);
+  startCountdown();
+</script>
 
 </body>
 </html>
