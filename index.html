@@ -96,34 +96,26 @@
     .menu-day p{margin:6px 0 0;color:var(--muted)}
 
     /* gallery */
-    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-    @media(min-width:600px){.gallery{grid-template-columns:repeat(3,1fr)}}
-    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:10px;cursor:pointer;display:block}
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:8px;
+    }
+    .gallery img{
+      width:100%;
+      height:120px;
+      object-fit:cover;
+      border-radius:10px;
+      cursor:pointer;
+      display:block;
+    }
 
     /* steps */
     .process{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
     .step{flex:1 1 120px;background:#fff3ec;padding:10px;border-radius:10px;text-align:center;font-weight:700;color:var(--accent)}
 
-    /* testimonial */
-    .testi{display:flex;flex-direction:column;gap:8px}
-    .titem{background:#fff;padding:12px;border-radius:10px}
-
     footer{padding:18px 0;text-align:center;color:#666;margin-top:18px;font-size:14px}
 
-    /* sticky whatsapp */
-    .sticky{
-      position:fixed;right:16px;bottom:16px;background:var(--whatsapp);color:#fff;padding:12px 16px;border-radius:999px;font-weight:800;box-shadow:0 12px 36px rgba(0,0,0,0.16);text-decoration:none;z-index:999;display:flex;gap:8px;align-items:center
-    }
-
-    /* lightbox */
-    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.8);display:none;align-items:center;justify-content:center;padding:18px;z-index:1200}
-    .lightbox img{max-width:92%;max-height:86%;border-radius:10px}
-    .close-x{position:absolute;top:18px;right:18px;color:#fff;font-size:22px;font-weight:700;cursor:pointer}
-
-    .muted{color:var(--muted);font-size:13px}
-    a.small-link{color:var(--accent);font-weight:700;text-decoration:none}
-
-    /* small responsive tweaks */
     @media(max-width:480px){
       .brand h1{font-size:16px}
       .hero .title{font-size:20px}
@@ -160,7 +152,6 @@
       </div>
 
       <div class="header-ctas">
-        <!-- Primary WhatsApp action uses primary number; alternate shown below -->
         <a class="cta" href="https://wa.me/919142617150?text=Hi%20I%20want%20to%20order" target="_blank" id="whatsappPrimary">Order on WhatsApp</a>
         <a class="cta secondary" href="https://share.google/0he2u6jxRmV2cFOOL" target="_blank">Google Reviews</a>
       </div>
@@ -195,44 +186,41 @@
           <p class="muted" style="margin-bottom:8px;">Monthly plans show original price struck and the current offer price — limited slots each week.</p>
 
           <div class="pricing">
-            <!-- Veg Monthly plan -->
-            <div class="plan" aria-label="Veg monthly plan">
+            <div class="plan">
               <h4>🍛 Veg — Lunch + Dinner Combo (Monthly)</h4>
               <div class="price-line">
                 <div class="price-old">₹3,600</div>
                 <div class="price-now">₹3,400 / month</div>
                 <div style="margin-left:auto" class="small">~ ₹60 / meal</div>
               </div>
-              <p class="muted" style="margin-top:8px">Original price ₹3,600 shown to highlight discount. Subscribe monthly and save. Includes daily lunch + dinner.</p>
+              <p class="muted" style="margin-top:8px">Original price ₹3,600 shown to highlight discount. Subscribe monthly and save.</p>
               <div style="margin-top:8px;display:flex;gap:8px;">
                 <a class="cta" href="https://wa.me/919142617150?text=I%20want%20veg%20monthly%20subscription" target="_blank">Subscribe Veg ₹3,400</a>
                 <a class="cta secondary" href="https://wa.me/919142617150?text=I%20want%20veg%20trial" target="_blank">Try Trial ₹149</a>
               </div>
             </div>
             
-            <!-- Non-Veg Monthly plan -->
-            <div class="plan" aria-label="Non veg monthly plan">
+            <div class="plan">
               <h4>🍗 Non-Veg — Lunch + Dinner Combo (Monthly)</h4>
               <div class="price-line">
                 <div class="price-old">₹3,900</div>
                 <div class="price-now">₹3,600 / month</div>
                 <div style="margin-left:auto" class="small">~ ₹65 / meal</div>
               </div>
-              <p class="muted" style="margin-top:8px">Original price ₹3,900 shown to highlight discount. Best for non-veg lovers. Includes daily lunch + dinner.</p>
+              <p class="muted" style="margin-top:8px">Original price ₹3,900 shown to highlight discount.</p>
               <div style="margin-top:8px;display:flex;gap:8px;">
                 <a class="cta" href="https://wa.me/919142617150?text=I%20want%20nonveg%20monthly%20subscription" target="_blank">Subscribe Non-Veg ₹3,600</a>
                 <a class="cta secondary" href="https://wa.me/919142617150?text=I%20want%20nonveg%20trial" target="_blank">Try Trial ₹149</a>
               </div>
             </div>
 
-            <!-- Breakfast / One-time meals -->
-            <div class="plan" aria-label="Breakfast and one-time">
+            <div class="plan">
               <h4>🍳 Breakfast & One-time Meals</h4>
               <div class="price-line">
                 <div class="price-now">Breakfast ₹49 / meal</div>
-                <div style="margin-left:auto" class="small">One-time Lunch/Dinner: from ₹80</div>
+                <div style="margin-left:auto" class="small">One-time ₹80+</div>
               </div>
-              <p class="muted" style="margin-top:8px">We deliver breakfast separately. Also offer one-time lunch/dinner orders — useful for guests or special days.</p>
+              <p class="muted" style="margin-top:8px">Breakfast separate — one-time meals also available.</p>
               <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;">
                 <a class="cta" href="https://wa.me/919142617150?text=I%20want%20one%20time%20meal" target="_blank">Order One-time Meal</a>
                 <a class="cta secondary" href="https://wa.me/919142617150?text=I%20want%20breakfast%20today" target="_blank">Order Breakfast</a>
@@ -241,247 +229,99 @@
           </div>
         </div>
 
-       <!-- Pure Veg Breakfast + Lunch + Dinner Monthly Plan -->
-<div class="plan" aria-label="Pure veg full day plan">
-  <h4>🌿 Pure Veg — Breakfast + Lunch + Dinner (Monthly)</h4>
-  <div class="price-line">
-    <div class="price-old">₹4,700</div>
-    <div class="price-now">₹4,499 / month</div>
-    <div style="margin-left:auto" class="small">~ ₹150 / day</div>
-  </div>ss="muted" style="margin-top:8px">Complete pure veg full-day plan including breakfast, lunch & dinner.</p>
-  <div style="margin-top:8px;display:flex;gap:8px;">
-    <a class="cta" href="https://wa.me/919142617150?text=I%20want%20pure%20veg%20full%20day%20plan" target="_blank">Subscribe ₹4,499</a>
-  </div>
-</div>
- 
-    <!-- Regular Breakfast + Lunch + Dinner Monthly Plan -->
-<div class="plan" aria-label="Full day plan">
-  <h4>🍽️ Breakfast + Lunch + Dinner (Monthly)</h4>
-  <div class="price-line">
-    <div class="price-old">₹4,900</div>
-    <div class="price-now">₹4,699 / month</div>
-    <div style="margin-left:auto" class="small">~ ₹153 / day</div>
-  </div>
-  <p class="muted" style="margin-top:8px">Full day meals: breakfast, lunch & dinner — veg/non-veg rotation.</p>
-  <div style="margin-top:8px;display:flex;gap:8px;">
-    <a class="cta" href="https://wa.me/919142617150?text=I%20want%20full%20day%20plan" target="_blank">Subscribe ₹4,599</a>
-  </div>
-</div>
-        <!-- WEEKLY MENUS -->
-        <div style="margin-top:14px" class="card" id="weekly">
-          <h2 class="section">Weekly Menus (Mon–Sun)</h2>
-          <p class="muted" style="margin:0 0 10px 0">We publish both Veg & Non-Veg weekly rotations. Below are sample weekly menus. (Customers can request veg or non-veg on subscription.)</p>
 
-    <div class="menu-list">
-
-      <div class="menu-day">
-        <h4>MONDAY</h4>
-        <p><strong>Lunch:</strong> Jeera Rice, Rajma Curry, Salad, Achar</p>
-        <p><strong>Dinner:</strong> Roti, Aloo–Soyabean Curry, Salad, Achar</p>
-      </div>
-
-      <div class="menu-day">
-        <h4>TUESDAY</h4>
-        <p><strong>Lunch:</strong> Roti / Rice, Dal Fry, Seasonal Veg, Salad, Achar</p>
-        <p><strong>Dinner:</strong> Puri & Chhole, Sweet (Kheer / Sewai), Salad</p>
-      </div>
-
-      <div class="menu-day">
-        <h4>WEDNESDAY</h4>
-        <p><strong>Lunch:</strong> Rice + Roti, Arhar Dal, Salad</p>
-        <p><strong>Dinner:</strong> Roti, Mixed Vegetable Curry, Salad, Achar</p>
-      </div>
-
-      <div class="menu-day">
-        <h4>THURSDAY</h4>
-        <p><strong>Lunch:</strong> Kadhi Pakora with Rice, Salad, Achar</p>
-        <p><strong>Dinner:</strong> Crispy Kachori, Veg Curry, Sweet (Halwa / Sewai)</p>
-      </div>
-
-      <div class="menu-day">
-        <h4>FRIDAY</h4>
-        <p><strong>Lunch:</strong> Rice / Roti, Mixed Dal, Seasonal Veg, Salad</p>
-        <p><strong>Dinner:</strong> Roti / Fried Rice, Sabji, Salad</p>
-      </div>
-
-      <div class="menu-day">
-        <h4>SATURDAY</h4>
-        <p><strong>Lunch:</strong> Roti / Rice, Chana Sabji, Dal, Salad, Achar</p>
-        <p><strong>Dinner:</strong> Sattu Paratha (Special Bihar Taste), Chana–Aloo Curry, Salad, Achar</p>
-      </div>
-
-      <div class="menu-day">
-        <h4>SUNDAY</h4>
-        <p><strong>Lunch:</strong> Jeera Rice, Paneer Curry, Dal Fry, Salad, Achar</p>
-        <p><strong>Dinner:</strong> Roti, Tadka Dal, Bhujia (Chef's Choice), Salad, Achar</p>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- NON-VEG WEEKLY MENU -->
-  <div style="margin-top:14px">
-    <h3 style="margin:0 0 8px 0;color:var(--accent)">🍗 Non-Veg — Weekly Menu</h3>
-
-    <div class="menu-list">
-
-      <div class="menu-day">
-        <h4>MONDAY</h4>
-        <p><strong>Lunch:</strong> Jeera Rice, Special Chicken Curry, Salad, Achar</p>
-        <p><strong>Dinner:</strong> Roti, Mixed Veg Curry, Salad, Achar</p>
-      </div>
-
-      <div class="menu-day">
-        <h4>TUESDAY</h4>
-        <p><strong>Lunch:</strong> Roti / Rice, Dal Fry, Seasonal Vegetable, Salad, Achar</p>
-        <p><strong>Dinner:</strong> Puri & Chhole, Sweet (Kheer / Sewai), Salad</p>
-      </div>
-
-      <div class="menu-day">
-        <h4>WEDNESDAY</h4>
-        <p><strong>Lunch:</strong> Special Chicken Curry, Steamed Rice, Salad</p>
-        <p><strong>Dinner:</strong> Roti, Mixed Vegetable Curry, Salad, Achar</p>
-      </div>
-
-      <div class="menu-day">
-        <h4>THURSDAY</h4>
-        <p><strong>Lunch:</strong> Kadhi Pakora with Rice, Salad, Achar</p>
-        <p><strong>Dinner:</strong> Crispy Kachori, Veg Curry, Sweet (Halwa / Sewai)</p>
-      </div>
-
-      <div class="menu-day">
-        <h4>FRIDAY</h4>
-        <p><strong>Lunch:</strong> Roti / Rice, Mixed Dal, Seasonal Veg, Salad</p>
-        <p><strong>Dinner:</strong> Egg Curry, Roti, Salad</p>
-      </div>
-
-      <div class="menu-day">
-        <h4>SATURDAY</h4>
-        <p><strong>Lunch:</strong> Roti / Rice, Chana Sabji, Dal, Salad, Achar</p>
-        <p><strong>Dinner:</strong> Sattu Paratha (Special Bihar Taste), Chana–Aloo Curry, Salad, Achar</p>
-      </div>
-
-      <div class="menu-day">
-        <h4>SUNDAY</h4>
-        <p><strong>Lunch:</strong> Jeera Rice, Paneer Curry, Dal Fry, Salad, Achar</p>
-        <p><strong>Dinner:</strong> Roti, Tadka Dal, Bhujia (Chef's Choice), Salad, Achar</p>
-      </div>
-
-    </div>
-  </div>
-
-  <div style="margin-top:12px">
-    <a class="cta" href="https://wa.me/919142617150?text=I%20want%20to%20subscribe%20monthly" target="_blank">Subscribe / Ask Today's Menu</a>
-  </div>
-</div>
-
-        <!-- Gallery -->
-        <div style="margin-top:14px" class="card">
-          <h2 class="section">Gallery</h2>
-          <p class="muted" style="margin:0 0 10px 0">Replace these placeholders with your real photos in `assets/` for better conversions.</p>
-          <div class="gallery" id="gallery">
-            <!-- Put your real images in assets folder and keep these filenames:
-                 assets/banner.jpg, assets/meal1.jpg, assets/meal2.jpg, assets/meal3.jpg, assets/meal4.jpg, assets/whatsapp-qr.png
-                 If you don't upload, unsplash placeholders will remain. -->
-            <img src="https://raw.githubusercontent.com/viveksneh/dineanddelight/main/assets/meal1.jpg" alt="Meal 1">
-            <img src="https://raw.githubusercontent.com/viveksneh/dineanddelight/main/assets/meal2.jpg" alt="Meal 2">
-            <img src="https://raw.githubusercontent.com/viveksneh/dineanddelight/main/assets/meal3.jpg" alt="Meal 3">
-            <img src="https://raw.githubusercontent.com/viveksneh/dineanddelight/main/assets/meal4.jpg" alt="Meal 4">
-            <img src="https://raw.githubusercontent.com/viveksneh/dineanddelight/main/assets/meal5.jpg" alt="Meal 5">
-            <img src="https://raw.githubusercontent.com/viveksneh/dineanddelight/main/assets/meal6.jpg" alt="Meal 6">
+       <div class="plan">
+          <h4>🌿 Pure Veg — Breakfast + Lunch + Dinner (Monthly)</h4>
+          <div class="price-line">
+            <div class="price-old">₹4,700</div>
+            <div class="price-now">₹4,499 / month</div>
+            <div style="margin-left:auto" class="small">~ ₹150 / day</div>
+          </div>
+          <p class="muted" style="margin-top:8px">Complete pure veg full-day plan including breakfast, lunch & dinner.</p>
+          <div style="margin-top:8px;display:flex;gap:8px;">
+            <a class="cta" href="https://wa.me/919142617150?text=I%20want%20pure%20veg%20full%20day%20plan" target="_blank">Subscribe ₹4,499</a>
           </div>
         </div>
 
-        <!-- About + hygiene -->
-        <div style="margin-top:14px" class="card">
-          <h2 class="section">About Us & Hygiene</h2>
-          <p class="muted">Dine & Delight provides homemade, hygienic meals across Patna. We cook daily using fresh ingredients and follow strict kitchen sanitation, temperature-controlled packing, and weekly health checks for staff.</p>
-
-          <div class="process" style="margin-top:8px">
-            <div class="step">🥗 Fresh Ingredients</div>
-            <div class="step">🧼 Clean Kitchen</div>
-            <div class="step">👩‍🍳 Trained Staff</div>
-            <div class="step">🚚 Daily Delivery</div>
+        <div class="plan">
+          <h4>🍽️ Breakfast + Lunch + Dinner (Monthly)</h4>
+          <div class="price-line">
+            <div class="price-old">₹4,900</div>
+            <div class="price-now">₹4,699 / month</div>
+            <div style="margin-left:auto" class="small">~ ₹153 / day</div>
           </div>
+          <p class="muted" style="margin-top:8px">Full day meals — mixed rotation.</p>
+          <div style="margin-top:8px;display:flex;gap:8px;">
+            <a class="cta" href="https://wa.me/919142617150?text=I%20want%20full%20day%20plan" target="_blank">Subscribe ₹4,599</a>
+          </div>
+        </div>
 
-          <p class="muted" style="margin-top:10px">FSSAI License: <strong>20425001002296</strong>. We separate veg & non-veg prep areas and accept special diet requests on WhatsApp.</p>
+        <!-- WEEKLY MENU -->
+        <div style="margin-top:14px" class="card" id="weekly">
+          <h2 class="section">Weekly Menus (Mon–Sun)</h2>
+          <div class="menu-list">
+            <div class="menu-day"><h4>MONDAY</h4><p><strong>Lunch:</strong> Jeera Rice, Rajma Curry, Salad, Achar</p><p><strong>Dinner:</strong> Roti, Aloo–Soyabean Curry, Salad, Achar</p></div>
+            <div class="menu-day"><h4>TUESDAY</h4><p><strong>Lunch:</strong> Roti/Rice, Dal Fry, Seasonal Veg, Salad, Achar</p><p><strong>Dinner:</strong> Puri, Chhole, Sweet</p></div>
+            <div class="menu-day"><h4>WEDNESDAY</h4><p><strong>Lunch:</strong> Rice+Roti, Arhar Dal, Salad</p><p><strong>Dinner:</strong> Roti, Mixed Veg Curry</p></div>
+            <div class="menu-day"><h4>THURSDAY</h4><p><strong>Lunch:</strong> Kadhi Pakora, Rice</p><p><strong>Dinner:</strong> Kachori, Veg Curry, Sweet</p></div>
+            <div class="menu-day"><h4>FRIDAY</h4><p><strong>Lunch:</strong> Roti/Rice, Mixed Dal</p><p><strong>Dinner:</strong> Fried Rice / Roti, Sabji</p></div>
+            <div class="menu-day"><h4>SATURDAY</h4><p><strong>Lunch:</strong> Rice/Roti, Chana Sabji, Dal</p><p><strong>Dinner:</strong> Sattu Paratha, Chana–Aloo Curry</p></div>
+            <div class="menu-day"><h4>SUNDAY</h4><p><strong>Lunch:</strong> Jeera Rice, Paneer Curry, Dal Fry</p><p><strong>Dinner:</strong> Roti, Tadka Dal, Bhujia</p></div>
+          </div>
+        </div>
+
+        <!-- NON-VEG WEEKLY MENU -->
+        <div style="margin-top:14px">
+          <h3 style="margin:0 0 8px 0;color:var(--accent)">🍗 Non-Veg — Weekly Menu</h3>
+          <div class="menu-list">
+            <div class="menu-day"><h4>MONDAY</h4><p><strong>Lunch:</strong> Jeera Rice, Chicken Curry</p><p><strong>Dinner:</strong> Roti, Mixed Veg Curry</p></div>
+            <div class="menu-day"><h4>TUESDAY</h4><p><strong>Lunch:</strong> Rice/Roti, Dal Fry</p><p><strong>Dinner:</strong> Puri, Sweet</p></div>
+            <div class="menu-day"><h4>WEDNESDAY</h4><p><strong>Lunch:</strong> Chicken Curry, Rice</p><p><strong>Dinner:</strong> Roti, Mixed Veg Curry</p></div>
+            <div class="menu-day"><h4>THURSDAY</h4><p><strong>Lunch:</strong> Kadhi Pakora, Rice</p><p><strong>Dinner:</strong> Kachori, Veg Curry, Sweet</p></div>
+            <div class="menu-day"><h4>FRIDAY</h4><p><strong>Lunch:</strong> Rice/Roti, Mixed Dal</p><p><strong>Dinner:</strong> Egg Curry with Roti</p></div>
+            <div class="menu-day"><h4>SATURDAY</h4><p><strong>Lunch:</strong> Rice/Roti, Chana Sabji, Dal</p><p><strong>Dinner:</strong> Sattu Paratha</p></div>
+            <div class="menu-day"><h4>SUNDAY</h4><p><strong>Lunch:</strong> Jeera Rice, Paneer Curry, Dal Fry</p><p><strong>Dinner:</strong> Roti, Tadka Dal</p></div>
+          </div>
         </div>
       </section>
 
-      <!-- RIGHT column -->
+      <!-- RIGHT COLUMN (UPDATED GALLERY INCLUDED BELOW) -->
       <aside>
         <div class="card">
-          <h2 class="section">Current Offers</h2>
-          <div style="display:flex;flex-direction:column;gap:8px">
-            <div style="background:linear-gradient(90deg,#fff8f3,#fff2ea);padding:10px;border-radius:10px;border-left:5px solid var(--accent);font-weight:800">🎉 New customers: ₹299 OFF first month — Code: WELCOME299</div>
-            <div style="background:linear-gradient(90deg,#fff8f3,#fff2ea);padding:10px;border-radius:10px;border-left:5px solid var(--accent);font-weight:800">👥 Refer & Earn: ₹299 OFF per successful referral</div>
-            <div style="background:linear-gradient(90deg,#fff8f3,#fff2ea);padding:10px;border-radius:10px;border-left:5px solid var(--accent);font-weight:800">🔥 Limited trial slots: 20 / week — Book now</div>
-          </div>
+          <!-- GALLERY (INSTAGRAM STYLE) -->
+          <h2 class="section">Gallery</h2>
+          <p class="muted" style="margin:0 0 10px 0">Real meals perform better — share when ready.</p>
 
-          <div style="margin-top:12px">
-            <a class="cta" href="https://wa.me/919142617150?text=I%20want%20to%20claim%20offer" target="_blank">Claim Offer / Trial</a>
+          <div class="gallery" id="gallery">
+            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=900&q=80" alt="Poha & Breakfast Meal">
+            <img src="https://images.unsplash.com/photo-1604908554264-3d7182f63a7e?auto=format&fit=crop&w=900&q=80" alt="Chapati & Sabji Home Meal">
+            <img src="https://images.unsplash.com/photo-1612157777902-538e7bf3a89f?auto=format&fit=crop&w=900&q=80" alt="Healthy Indian Thali">
+            <img src="https://images.unsplash.com/photo-1603899122778-5df3c45a18d4?auto=format&fit=crop&w=900&q=80" alt="Veg Curry Meal Box">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80" alt="Paneer Curry & Rice">
+            <img src="https://images.unsplash.com/photo-1626188466076-d670fc2d08d2?auto=format&fit=crop&w=900&q=80" alt="Premium Indian Thali">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f525cc49c?auto=format&fit=crop&w=900&q=80" alt="Chicken Curry & Rice">
+            <img src="https://images.unsplash.com/photo-1633945274405-a6b6f35c8a49?auto=format&fit=crop&w=900&q=80" alt="Egg Curry Meal">
+            <img src="https://images.unsplash.com/photo-1625938143723-81f0f104f54b?auto=format&fit=crop&w=900&q=80" alt="Chicken Masala Thali">
           </div>
         </div>
 
-            <!-- CUSTOMER TESTIMONIALS -->
-<section class="why-us" style="margin-top:20px;">
-  <h2>What Our Customers Say</h2>
-  <ul style="list-style:none;padding-left:0;">
-    <li style="margin-bottom:15px;font-size:17px;">⭐ "The food tastes exactly like home. Fresh, clean and reliable every single day." – Aditi S.,Student</li>
-    <li style="margin-bottom:15px;font-size:17px;">⭐ "Best veg & non-veg tiffin in Patna. Quality and quantity both perfect." – Rohit K., Office</li>
-    <li style="margin-bottom:15px;font-size:17px;">⭐ "Full-day plan is a life saver. Breakfast, lunch and dinner always on time." – Neha P.,Patna</li>
-    <li style="margin-bottom:15px;font-size:17px;">⭐ "Very hygienic, polite service and timely delivery. Highly recommended." – Rajiv s.Student</li>
-  </ul>
-</section>
+        <div style="margin-top:14px" class="card">
+          <h2 class="section">About Us & Hygiene</h2>
+          <p class="muted">We cook using fresh ingredients and follow strict sanitation protocols.</p>
+          <div class="process" style="margin-top:8px">
+            <div class="step">🥗 Fresh</div>
+            <div class="step">🧼 Clean</div>
+            <div class="step">👩‍🍳 Trained</div>
+            <div class="step">🚚 Delivery</div>
+          </div>
+          <p class="muted" style="margin-top:10px">FSSAI: <strong>20425001002296</strong>.</p>
+        </div>
+      </aside>
+    </main>
 
-<!-- TRY 1 MEAL POPUP -->
-<style>
-  #trialPopup {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #ff9800;
-    color: #fff;
-    padding: 14px 20px;
-    border-radius: 12px;
-    font-size: 18px;
-    font-weight: 700;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
-    display: none;
-    z-index: 9999;
-  }
-  #trialPopup a {
-    color: #fff;
-    text-decoration: none;
-  }
-  #closePopup {
-    margin-left: 12px;
-    background: #00000040;
-    padding: 2px 8px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-</style>
-
-<div id="trialPopup">
-  <a href="https://wa.me/919142617150?text=I%20want%20to%20try%201%20meal">
-    Try 1 Meal ₹79 Now
-  </a>
-  <span id="closePopup">✕</span>
-</div>
-
-<script>
-  setTimeout(() => {
-    document.getElementById("trialPopup").style.display = "block";
-  }, 4000);
-
-  document.getElementById("closePopup").onclick = function() {
-    document.getElementById("trialPopup").style.display = "none";
-  }
-</script>
-
-           <!-- COPYRIGHT FOOTER -->
-<footer style="text-align:center;padding:18px 0;margin-top:30px;font-size:15px;color:#555;background:#f2f2f2;">
-  © 2025 Dine & Delight. All Rights Reserved.
-</footer> 
+    <footer>
+      © Dine & Delight — All Rights Reserved
+    </footer>
+  </div>
+</body>
+</html>
