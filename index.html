@@ -414,3 +414,66 @@
           <h2 class="section">What customers say</h2>
           <div class="titem">"Tiffin tastes like home — timely delivery and hygienic." <div class="muted">— Ravi K., Patna</div></div>
           <div class="titem">"Good portions and honest prices." <div class="muted">— Neha S.</
+
+            <!-- CUSTOMER TESTIMONIALS -->
+<section class="why-us" style="margin-top:20px;">
+  <h2>What Our Customers Say</h2>
+  <ul style="list-style:none;padding-left:0;">
+    <li style="margin-bottom:15px;font-size:17px;">⭐ "The food tastes exactly like home. Fresh, clean and reliable every single day." – Aditi S.</li>
+    <li style="margin-bottom:15px;font-size:17px;">⭐ "Best veg & non-veg tiffin in Patna. Quality and quantity both perfect." – Rohit K.</li>
+    <li style="margin-bottom:15px;font-size:17px;">⭐ "Full-day plan is a life saver. Breakfast, lunch and dinner always on time." – Neha P.</li>
+    <li style="margin-bottom:15px;font-size:17px;">⭐ "Very hygienic, polite service and timely delivery. Highly recommended." – Imran A.</li>
+  </ul>
+</section>
+
+<!-- TRY 1 MEAL POPUP -->
+<style>
+  #trialPopup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff9800;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+    display: none;
+    z-index: 9999;
+  }
+  #trialPopup a {
+    color: #fff;
+    text-decoration: none;
+  }
+  #closePopup {
+    margin-left: 12px;
+    background: #00000040;
+    padding: 2px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+</style>
+
+<div id="trialPopup">
+  <a href="https://wa.me/919142617150?text=I%20want%20to%20try%201%20meal">
+    Try 1 Meal ₹79 Now
+  </a>
+  <span id="closePopup">✕</span>
+</div>
+
+<script>
+  setTimeout(() => {
+    document.getElementById("trialPopup").style.display = "block";
+  }, 4000);
+
+  document.getElementById("closePopup").onclick = function() {
+    document.getElementById("trialPopup").style.display = "none";
+  }
+</script>
+
+           <!-- COPYRIGHT FOOTER -->
+<footer style="text-align:center;padding:18px 0;margin-top:30px;font-size:15px;color:#555;background:#f2f2f2;">
+  © 2025 Dine & Delight. All Rights Reserved.
+</footer> 
