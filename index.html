@@ -375,4 +375,64 @@
           <div class="titem">⭐⭐⭐⭐⭐ “Feels like home-cooked food, not commercial taste.” — Rohan</div>  
           <div class="titem">⭐⭐⭐⭐⭐ “Delivered on time & hygienic packing.” — Aanchal</div>  
           <div class="titem">⭐⭐⭐⭐⭐ “Never felt bored with rotating menu.” — Imran</div>  
-          <a href="https://share.google/0he2u6jxRmV2cFOOL" target="_blank" class="small-link" style="display:block;margin-top:10px;text-align:center;">View All Re
+          <a href="https://share.google/0he2u6jxRmV2cFOOL" target="_blank" class="small-link" style="display:block;margin-top:10px;text-align:center;">View All Reviews →</a>  
+        </div>  
+    
+      </section>    
+    
+      <!-- RIGHT column -->    
+      <aside>    
+        <div class="card">    
+          <h2 class="section">Contact & Support</h2>    
+          <p class="muted">Call / WhatsApp for custom requests, hostel / PG tie-ups, corporate lunch boxes.</p>  
+          <a class="cta" href="https://wa.me/919142617150" target="_blank">Chat on WhatsApp</a>  
+          <p class="muted" style="margin-top:10px;">Phone: <strong>9142617150</strong></p>  
+        </div>    
+      </aside>  
+    </main>    
+  </div>  
+  
+  <!-- Sticky WhatsApp CTA -->  
+  <a class="sticky" href="https://wa.me/919142617150" target="_blank">Order on WhatsApp</a>  
+  
+  <!-- TIMER SCRIPT -->  
+  <script>  
+  function startTimer(duration, display) {  
+    let timer = duration, minutes, seconds;
+
+    // set initial display immediately
+    if (display) {
+      const initMin = Math.floor(timer / 60);
+      const initSec = timer % 60;
+      display.textContent = (initMin < 10 ? "0" + initMin : initMin) + ":" + (initSec < 10 ? "0" + initSec : initSec);
+    }
+
+    // use a single interval reference
+    const intervalId = setInterval(function () {  
+      minutes = parseInt(timer / 60, 10);  
+      seconds = parseInt(timer % 60, 10);  
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;  
+      seconds = seconds < 10 ? "0" + seconds : seconds;  
+
+      if (display) display.textContent = minutes + ":" + seconds;  
+
+      if (--timer < 0) {  
+        // When timer finishes, stop (do not restart). If you prefer restart, replace the next line.
+        clearInterval(intervalId);
+        if (display) display.textContent = "00:00";
+        return;
+      }  
+    }, 1000);  
+  }  
+
+  /* FIXED TIMER INIT -- robust load listener and null check */
+  window.addEventListener("load", function () {  
+    const timeLeft = document.getElementById("timeLeft");  
+    if (timeLeft) startTimer(900, timeLeft); // 15 minutes  
+  });  
+  </script>  
+  
+</body>    
+</html>
+
