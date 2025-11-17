@@ -38,7 +38,9 @@
       -webkit-font-smoothing:antialiased;    
     }    
     
-    .container{max-width:var(--max-width);margin:0 auto;padding:18px;}    
+    /* keep container padding symmetrical to fix left/right gap on small screens */
+    .container{max-width:var(--max-width);margin:0 auto;padding-left:18px;padding-right:18px;padding-top:18px;padding-bottom:18px;}    
+    
     header{display:flex;justify-content:space-between;align-items:center;padding:10px 0;gap:12px;flex-wrap:wrap}    
     .brand{display:flex;gap:12px;align-items:center}    
     .logo{    
@@ -72,7 +74,9 @@
     .grid{display:grid;grid-template-columns:1fr;gap:14px}    
     @media(min-width:980px){.grid{grid-template-columns:1fr 380px}}    
     
-    .card{background:#fff;padding:14px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(15,15,15,0.04)}    
+    /* keep card padding consistent so left/right alignment looks even */
+    .card{background:#fff;padding:14px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(15,15,15,0.04);margin:0}    
+    
     h2.section{margin:0 0 8px 0;color:var(--accent);font-size:18px}    
     
     .pricing{display:flex;flex-direction:column;gap:10px}    
@@ -110,6 +114,8 @@
     @media(max-width:480px){    
       .brand h1{font-size:16px}    
       .hero .title{font-size:20px}    
+      /* reduce horizontal card padding visually on very small screens so left/right edges align */
+      .card, .menu-day { padding-left:12px; padding-right:12px; }
     }  
   </style>    
 </head>    
@@ -154,7 +160,7 @@
   
         <!-- TIMER ADDED ABOVE PRICING -->  
         <div id="offerTimer" style="margin-top:0;background:#fff3ec;color:#ff7043;padding:10px;border-radius:10px;text-align:center;font-weight:700;">  
-          Limited slots today! Offer ends in <span id="timeLeft"></span>  
+          Limited slots today! Offer ends in <span id="timeLeft">15:00</span>  
         </div>  
   
         <!-- PURCHASED BADGE -->  
@@ -242,6 +248,9 @@
           <h2 class="section">Weekly Menus (Mon–Sun)</h2>    
           <p class="muted" style="margin:0 0 10px 0">We publish both Veg & Non-Veg weekly rotations. Below are sample weekly menus. (Customers can request veg or non-veg on subscription.)</p>    
     
+    <!-- ADDED: Veg weekly heading so both sections have headings like Non-Veg -->  
+    <h3 style="margin:10px 0 8px 0;color:var(--accent)">🥗 Veg — Weekly Menu</h3>  
+
     <div class="menu-list">    
     
       <div class="menu-day">    
@@ -366,21 +375,4 @@
           <div class="titem">⭐⭐⭐⭐⭐ “Feels like home-cooked food, not commercial taste.” — Rohan</div>  
           <div class="titem">⭐⭐⭐⭐⭐ “Delivered on time & hygienic packing.” — Aanchal</div>  
           <div class="titem">⭐⭐⭐⭐⭐ “Never felt bored with rotating menu.” — Imran</div>  
-          <a href="https://share.google/0he2u6jxRmV2cFOOL" target="_blank" class="small-link" style="display:block;margin-top:10px;text-align:center;">View All Reviews →</a>  
-        </div>  
-    
-      </section>    
-    
-      <!-- RIGHT column -->    
-      <aside>    
-        <div class="card">    
-          <h2 class="section">Contact & Support</h2>    
-          <p class="muted">Call / WhatsApp for custom requests, hostel / PG tie-ups, corporate lunch boxes.</p>  
-          <a class="cta" href="https://wa.me/919142617150" target="_blank">Chat on WhatsApp</a>  
-          <p class="muted" style="margin-top:10px;">Phone: <strong>9142617150</strong></p>  
-        </div>    
-      </aside>  
-    </main>    
-  </div>  
-  
-  <!-- S
+          <a href="https://share.google/0he2u6jxRmV2cFOOL" target="_blank" class="small-link" style="display:block;margin-top:10px;text-align:center;">View All Re
